@@ -4,8 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 # Routers
 from auth.routes import router as auth_router
-# from income.routes import router as income_router   # later
-# from expenses.routes import router as expenses_router  # later
+from incomes.routes import router as income_router
+from expenses.routes import router as expenses_router  
 
 app = FastAPI(
     title="Personal Finance API",
@@ -28,8 +28,8 @@ app.add_middleware(
 # Routers
 # -----------------------------
 app.include_router(auth_router)
-# app.include_router(income_router)
-# app.include_router(expenses_router)
+app.include_router(income_router)
+app.include_router(expenses_router)
 
 # -----------------------------
 # Root / Health Check

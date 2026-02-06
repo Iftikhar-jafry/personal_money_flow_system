@@ -36,8 +36,8 @@ def login(user:UserLogin):
     users=load_user()
     for u in users:
         if u["username"]==user.username:
-            if verify_password(user.password,u["hash_password"]):
+            if verify_password(user.password,u["hashed_password"]):
                 token=create_access_token({"sub":user.username})
-                return {"access token":token,"token type":"bearer"}
+                return {"access_token":token,"token_type":"bearer"}
     
     raise HTTPException(status_code=401, detail="Invalid Credentials")
