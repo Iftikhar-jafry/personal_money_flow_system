@@ -2,5 +2,9 @@
     {
         "username": "iftikhar12",
         "hashed_password": "$2b$12$Ubg4Q.rYDlYih3EYzuqAyeqaTgIGWvCs6BvvaAYfbOCVayTkjCFcK"
+    },
+    {
+        "username": "iftikharbabu",
+        "hashed_password": "$2b$12$31Qgk3XEw9GRGpqMX6oZs.g0lvgNOZsbfBJoSdykBJAugEJPrXbF2"
     }
 ]

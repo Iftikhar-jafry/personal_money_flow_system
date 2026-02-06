@@ -8,6 +8,7 @@ router = APIRouter(prefix="/income", tags=["Income"])
 
 @router.post("/")
 def create_income(income:IncomeCreate,username: str = Depends(get_current_user)):
+    print("hello")
     return add_income(username,income.amount,income.source,income._date)
 
 @router.get("/monthly")
